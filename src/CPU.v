@@ -41,7 +41,7 @@ module cpu
 			2'b00 : dispReg = IReg_Data_Out;
 			2'b01 : dispReg = PC_Data_Out;
 			2'b10 : dispReg = Acc_Data_Out;
-			default : dispReg = 8'bzzzzzzzz;
+			default : dispReg = 8'b00000000;
 		endcase
 		
 		case (state)

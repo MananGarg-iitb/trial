@@ -12,16 +12,16 @@ module Bus_Conductor (ALE, bus_in, bus_out, bus_en, addr_bus, Data_Bus_In, Data_
 		if(ALE == 1'b1) begin
 			bus_en = 8'b11111111;
 			bus_out = addr_bus;
-			Data_Bus_In = 8'bzzzzzzzz;
+			Data_Bus_In = 8'b00000000;
 		end
 		else if(adbd == 1'b1) begin
 			bus_en = 8'b11111111;
 			bus_out = Data_Bus_Out;
-			Data_Bus_In = 8'bzzzzzzzz;
+			Data_Bus_In = 8'b00000000;
 		end
 		else begin
 			bus_en = 8'b00000000;
-			bus_out = 8'bzzzzzzzz;
+			bus_out = 8'b00000000;
 			Data_Bus_In = bus_in;
 		end
 	end
